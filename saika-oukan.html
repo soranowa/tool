@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>歳華往還 ｜ 和暦⇄西暦</title>
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALJSURBVDhPjZJLTBNhFIW7cU/iyoWKvCx0ppVH6XQ0unOhibjQREyIjwUBDQQiCBgEDIaoCSvZ+NioCxWFoqXTlhYQeRXaQmlBUMDKtBCSvigtSGngmPkhVEh8THKSO+effHPuvb/oSaZon04ufugouzlpq6l0jdVV8dbbxby1vIgfu1fF22oreEtpAT965xYvnNlqKlzm67nTuvTE590yWZyIk6c9GjlOw9OuQtDUB1+XHgiHgEiE1IInPGszX+Hr7sCyxQRnUyOGM5OhVUhUIq2C+tHN0tBkpMBcUoChwqvg295h8ZMRpvw8jFSWIDBhx5fGBpiL8zGYn4d2WSKMLA1OIQmLOCXlNjISqKUJmHv/GpvRKFbcPFwfW8ifV+fd4FubsbmxgdUFN6YeN+JDygEYWFpIEBBxijS+k5XCWl4ES2khws5ZeEz9GLpxDZFAAAt6zXbth1vTRlKaCq6gI0ssAPwijVzMd7I0PIO9CNhHEQ2HsObzwjdixsZ6BD8XF3ZqIcHSuB3ON6+gkx7ZAnAMxRsZCloljd7L5xGec8Iz0IeeC2ew5vWCVzXj88WziK6EMdf6Ft05p8FliWFUkha2Admp0J04Bs9gH3zWYXiG+uEdHsRGJIKVeRfxPUMD8NusZE5qKn43wJB1lPQpTNrRUAt7fTUc9dVYX1rCYk8XRqvL4Lh/F+MP6sg3vZfOQZ+ZEgPo6Xh8e9qE0Ow0gpPjCE5OEG1G17Hm9WBpwo7g1JYX+j5DVqul4mOATlZG+mpPT0K7LAFqOh5qySFEl5cx++IZWg7GEZ8oPRmcPBVGVvo7gLzsiMtOI7KUFqA3NweaDHLrYmIksRloGYmLAIRN7JGaOkxSCRvae7YL0PUHwN8kALausoJ6OXoqgxj/K4OShuVkOjhGMiBqlYv3GxhaZWRpn5aR+IVY/5JBSfmNrLRHx6Ql/QLSlJIA8uk0NwAAAABJRU5ErkJggg==">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+:root{
+  --su:#1C1A17; --usu:#7A7268; --kami:#FDFCF8; --ji:#F7F4EC;
+  --sen:#E3DDD0; --shu:#B7382C; --ai:#2E4159; --r:8px;
+  --mincho:"Yu Mincho","YuMincho","Hiragino Mincho ProN","Noto Serif JP","Shippori Mincho",serif;
+  --gothic:system-ui,-apple-system,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--ji); color:var(--su); font-family:var(--gothic); font-size:18px;
+  line-height:1.8; -webkit-font-smoothing:antialiased; font-feature-settings:"palt";
+  padding:0 0 72px;
+}
+.num{font-variant-numeric:tabular-nums}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+
+/* ---- header ---- */
+header{border-bottom:1px solid var(--sen);padding:48px 0 34px;margin-bottom:44px}
+.title{font-family:var(--mincho);font-size:44px;font-weight:600;letter-spacing:.22em;line-height:1.3}
+.title .dot{color:var(--shu)}
+.yomi-t{font-family:var(--mincho);font-size:15px;color:var(--usu);letter-spacing:.3em;margin-top:6px}
+.kind{display:inline-block;font-family:var(--mincho);font-size:13px;color:#fff;background:var(--shu);
+  border-radius:4px;padding:2px 10px;letter-spacing:.14em;margin-top:14px}
+.lead{margin-top:14px;font-size:16px;color:var(--usu);max-width:64ch;line-height:1.9}
+.lead b{color:var(--su);font-weight:600}
+
+/* ---- card ---- */
+.card{position:relative;background:var(--kami);border:1px solid var(--sen);border-radius:var(--r);
+  padding:32px 34px 34px;margin-bottom:32px}
+.card::before{content:"";position:absolute;left:0;top:24px;bottom:24px;width:3px;
+  background:var(--shu);border-radius:3px 0 0 3px}
+.card-h{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
+  padding-bottom:18px;border-bottom:1px solid var(--sen);margin-bottom:26px}
+.card-h .n{font-family:var(--mincho);font-size:14px;color:var(--shu);letter-spacing:.2em}
+.card-h h2{font-family:var(--mincho);font-size:26px;font-weight:600;letter-spacing:.12em}
+.card-h .memo{font-size:14px;color:var(--usu)}
+.body{display:grid;grid-template-columns:1.15fr .7fr 1.35fr;gap:28px;align-items:start}
+.body.two{grid-template-columns:1.1fr 1.4fr}
+.col > .lab{font-size:12px;letter-spacing:.2em;color:var(--usu);margin-bottom:10px;display:block}
+
+/* ---- jump ---- */
+.jumps{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.jump{font:inherit;font-family:var(--mincho);font-size:12.5px;background:var(--kami);
+  border:1px solid var(--sen);border-radius:6px;padding:3px 9px;color:var(--usu);cursor:pointer;
+  transition:border-color .15s ease,color .15s ease}
+.jump:hover{border-color:var(--shu);color:var(--shu)}
+
+/* ---- scroll picker ---- */
+.picker{position:relative;height:230px;overflow-y:auto;border:1px solid var(--sen);
+  border-radius:var(--r);background:var(--ji);scrollbar-width:thin}
+.picker::-webkit-scrollbar{width:8px}
+.picker::-webkit-scrollbar-thumb{background:#D8D1C2;border-radius:8px}
+.pick{position:relative;display:flex;align-items:baseline;gap:8px;width:100%;text-align:left;
+  background:none;border:none;border-bottom:1px solid var(--sen);padding:10px 12px 10px 18px;
+  font:inherit;font-size:16px;color:var(--su);cursor:pointer;transition:background .15s ease,color .15s ease}
+.pick:hover{background:rgba(28,26,23,.05)}
+.pick::before{content:"";position:absolute;left:0;top:7px;bottom:7px;width:0;background:var(--shu);transition:width .16s ease}
+.pick.on{background:var(--kami);color:var(--shu)}
+.pick.on::before{width:3px}
+.pick .nm{font-family:var(--mincho);font-size:18px;letter-spacing:.04em;white-space:nowrap}
+.pick .yo{font-size:11.5px;color:var(--usu);white-space:nowrap}
+.pick.on .yo{color:var(--shu);opacity:.7}
+.pick .tag{font-size:10.5px;color:#fff;background:var(--ai);border-radius:3px;padding:0 5px;
+  letter-spacing:.06em;flex:none}
+.pick .rg{margin-left:auto;font-size:12px;color:var(--usu);white-space:nowrap;padding-left:6px}
+.pick.on .rg{color:var(--shu);opacity:.7}
+.scroll-hint{font-size:12.5px;color:var(--usu);margin-top:8px}
+
+/* ---- keyboard input ---- */
+.kbd{display:flex;gap:8px;margin-bottom:10px}
+.kbd input{flex:1;font:inherit;font-family:var(--mincho);font-size:24px;letter-spacing:.06em;
+  padding:10px 14px;border:1px solid var(--sen);border-radius:var(--r);background:var(--kami);
+  color:var(--su);width:100%;font-variant-numeric:tabular-nums}
+.kbd input:focus{outline:none;border-color:var(--shu)}
+.kbd .unit{align-self:center;font-family:var(--mincho);font-size:18px;color:var(--usu)}
+
+/* ---- result ---- */
+.result{border:1px solid var(--sen);border-radius:var(--r);background:var(--ji);padding:24px 26px}
+.res-main{font-family:var(--mincho);font-size:46px;font-weight:600;letter-spacing:.04em;
+  color:var(--shu);line-height:1.25;font-variant-numeric:tabular-nums}
+.res-sub{font-family:var(--mincho);font-size:20px;color:var(--su);margin-top:4px;letter-spacing:.06em}
+.res-eto{font-size:14px;color:var(--usu);margin-top:10px;padding-top:12px;border-top:1px solid var(--sen)}
+.fade{animation:up .3s ease-out both}
+@keyframes up{from{opacity:0;transform:translateY(2px)}to{opacity:1;transform:none}}
+.gen{display:inline-block;font-size:12px;color:#fff;background:var(--ai);border-radius:4px;
+  padding:1px 7px;margin-left:8px;vertical-align:middle;letter-spacing:.08em;font-family:var(--gothic)}
+.cands{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.cand{font:inherit;font-size:14.5px;font-family:var(--mincho);background:var(--kami);color:var(--usu);
+  border:1px solid var(--sen);border-radius:var(--r);padding:6px 13px;cursor:pointer;transition:.15s ease}
+.cand.on{border-color:var(--shu);color:var(--shu)}
+.split-note{font-size:13px;color:var(--ai);margin-bottom:10px;line-height:1.7}
+
+/* ---- copy ---- */
+.copies{margin-top:18px;display:grid;gap:10px}
+.copy{position:relative;display:block;width:100%;font:inherit;font-size:16px;text-align:left;
+  background:var(--kami);border:1px solid var(--sen);border-radius:var(--r);padding:12px 16px 13px;
+  cursor:pointer;color:var(--su);transition:border-color .15s ease,background .15s ease,color .15s ease}
+.copy:hover{border-color:var(--shu)}
+.copy:disabled{opacity:.5;cursor:default;border-color:var(--sen)}
+.copy .fm{display:block;font-size:11.5px;letter-spacing:.14em;color:var(--usu);margin-bottom:3px}
+.copy .row{display:flex;align-items:center;gap:10px}
+.copy .ic{font-size:14px;color:var(--usu);flex:none}
+.copy .tx{font-family:var(--mincho);font-size:17px;letter-spacing:.04em;font-variant-numeric:tabular-nums;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.copy.done{background:var(--shu);border-color:var(--shu);color:#fff}
+.copy.done .ic,.copy.done .fm{color:rgba(255,255,255,.8)}
+
+/* ---- unchiku ---- */
+.unchiku{margin-top:22px;padding-top:18px;border-top:1px solid var(--sen);
+  font-size:14.5px;color:var(--usu);line-height:1.95}
+.unchiku b{font-family:var(--mincho);color:var(--su);font-weight:600;letter-spacing:.06em}
+.unchiku .era-tag{display:inline-block;font-size:12px;color:var(--ai);border:1px solid var(--sen);
+  border-radius:4px;padding:0 7px;margin-right:8px;background:var(--ji)}
+footer{margin-top:44px;padding-top:24px;border-top:1px solid var(--sen);font-size:13.5px;color:var(--usu);line-height:1.9}
+footer a{color:var(--shu);text-decoration:underline;text-underline-offset:3px}
+.sig{margin-top:26px;padding-top:20px;border-top:1px solid var(--sen);
+  font-family:var(--mincho);font-size:17px;font-weight:700;color:var(--su);letter-spacing:.1em}
+
+@media (max-width:900px){
+  .body,.body.two{grid-template-columns:1fr}
+  .title{font-size:34px}
+  .res-main{font-size:38px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1 class="title">歳華往還<span class="dot">・</span></h1>
+  <div class="yomi-t">さいか おうかん ／ 和暦 ⇄ 西暦</div>
+  <div class="kind">年単位 簡易版</div>
+  <p class="lead">
+「歳華」は歳月の雅語、「往還」は行き来のこと。<b>令和から大化まで千三百八十余年。</b>
+上段：元号→西暦、下段：西暦→元号。形式①～③ボタンでクリップボードへコピー。
+  </p>
+</header>
+
+<!-- ============ 上段：元号 → 西暦 ============ -->
+<section class="card">
+  <div class="card-h">
+    <span class="n">其の一</span><h2>元号 → 西暦</h2>
+    <span class="memo">元号と年を選ぶと、西暦がその場で出ます</span>
+  </div>
+  <div class="body">
+    <div class="col">
+      <span class="lab">ERA ／ 元号</span>
+      <div class="jumps" id="eraJump"></div>
+      <div class="picker" id="eraPick"></div>
+      <p class="scroll-hint">↓ 下へスクロールで古い元号へ（大化まで）</p>
+    </div>
+    <div class="col">
+      <span class="lab">YEAR ／ 年</span>
+      <div class="picker" id="eyPick"></div>
+      <p class="scroll-hint">↓ 下へで古い年へ</p>
+    </div>
+    <div class="col">
+      <span class="lab">RESULT ／ 西暦</span>
+      <div class="result">
+        <div id="r1" class="fade">
+          <div class="res-main" id="r1main">—</div>
+          <div class="res-sub" id="r1sub">—</div>
+          <div class="res-eto" id="r1eto">—</div>
+        </div>
+        <div class="copies">
+          <button class="copy" id="c1a"><span class="fm">形式 ①　西暦（和暦）</span><span class="row"><span class="ic">📋</span><span class="tx"></span></span></button>
+          <button class="copy" id="c1b"><span class="fm">形式 ②　和暦（西暦）</span><span class="row"><span class="ic">📋</span><span class="tx"></span></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="unchiku" id="u1"></p>
+</section>
+
+<!-- ============ 下段：西暦 → 元号 ============ -->
+<section class="card">
+  <div class="card-h">
+    <span class="n">其の二</span><h2>西暦 → 元号</h2>
+    <span class="memo">キーボード入力でも、スクロール選択でも</span>
+  </div>
+  <div class="body two">
+    <div class="col">
+      <span class="lab">YEAR ／ 西暦（直接入力できます）</span>
+      <div class="kbd">
+        <input id="syInput" type="number" step="1" inputmode="numeric">
+        <span class="unit">年</span>
+      </div>
+      <div class="jumps" id="syJump"></div>
+      <div class="picker" id="syPick"></div>
+      <p class="scroll-hint">↓ 下へスクロールで古い西暦へ（645年まで）</p>
+    </div>
+    <div class="col">
+      <span class="lab">RESULT ／ 和暦</span>
+      <div class="result">
+        <div class="split-note" id="r2note" style="display:none"></div>
+        <div class="cands" id="r2cands" style="display:none"></div>
+        <div id="r2" class="fade">
+          <div class="res-main" id="r2main">—</div>
+          <div class="res-sub" id="r2sub">—</div>
+          <div class="res-eto" id="r2eto">—</div>
+        </div>
+        <div class="copies">
+          <button class="copy" id="c2a"><span class="fm">形式 ①　西暦（和暦）</span><span class="row"><span class="ic">📋</span><span class="tx"></span></span></button>
+          <button class="copy" id="c2b"><span class="fm">形式 ②　和暦（西暦）</span><span class="row"><span class="ic">📋</span><span class="tx"></span></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="unchiku" id="u2"></p>
+</section>
+
+<footer>
+  ※ 明治5年までの和暦は太陰太陽暦のため、元号の年と西暦の年は完全には重なりません（年始が約1〜2か月ずれます）。本表は「その元号年が始まった西暦年」で対応させた簡易換算です。<br>
+  ※ 改元のあった年は、旧元号と新元号の二つの呼び方が並び立ちます（例：1989年＝昭和64年／平成元年）。その年は候補を選べます。<br>
+  ※ 南北朝時代（1331〜1392）は、南朝（吉野）と北朝（京都）が別々の元号を用いました。該当する年は両朝の元号を並べて表示します。<br>
+  ※ 655〜685年と687〜700年は元号が用いられなかった空白期です。大宝元年（701年）以降、元号は今日まで途切れていません。<br>
+  ※ 読みは通行の一例、年の対応は通説によります。<br>
+<b>  ※ 明治6年（1873年）1月1日以降の日付を一日単位で厳密に換算するには、<a href="saika-oukan-strict.html">歳華往還・年月日 厳密換算版</a> をお使いください。</b>
+  <p class="sig">歳華往還 ＜和暦⇄西暦変換＞ @soranoiro.net</p>
+</footer>
+
+</div>
+
+<script>
+/* ===== 元号データ：[元号, 読み, 元年の西暦, 最終年の西暦, 朝, 蘊蓄] 新しい順 ===== */
+const NOWY = new Date().getFullYear();
+const RAW = [
+['令和','れいわ',2019,0,'','『万葉集』梅花の歌の序「初春の令月にして、気淑く風和ぎ」。国書を典拠とした初の元号。'],
+['平成','へいせい',1989,2019,'','『史記』五帝本紀「内平かに外成る」、『書経』「地平かに天成る」より。'],
+['昭和','しょうわ',1926,1989,'','『書経』尭典「百姓昭明、協和万邦」より。64年は歴代最長。'],
+['大正','たいしょう',1912,1926,'','『易経』「大亨は以て正しくす、天の道なり」より。'],
+['明治','めいじ',1868,1912,'','『易経』説卦伝「聖人南面して天下に聴き、明に嚮ひて治む」。一世一元の制はここから。'],
+['慶応','けいおう',1865,1868,'','江戸時代最後の元号。'],
+['元治','げんじ',1864,1865,'',''],
+['文久','ぶんきゅう',1861,1864,'',''],
+['万延','まんえん',1860,1861,'','桜田門外の変の年に改元。一年足らずで終わる。'],
+['安政','あんせい',1854,1860,'','日米和親条約、安政の大獄。'],
+['嘉永','かえい',1848,1854,'','黒船来航は嘉永6年。'],
+['弘化','こうか',1844,1848,'',''],
+['天保','てんぽう',1830,1844,'','天保の改革、天保の大飢饉。'],
+['文政','ぶんせい',1818,1830,'',''],
+['文化','ぶんか',1804,1818,'','町人文化の爛熟「化政文化」の前半。'],
+['享和','きょうわ',1801,1804,'',''],
+['寛政','かんせい',1789,1801,'','寛政の改革。'],
+['天明','てんめい',1781,1789,'','天明の大飢饉、浅間山の大噴火。'],
+['安永','あんえい',1772,1781,'',''],
+['明和','めいわ',1764,1772,'',''],
+['宝暦','ほうれき',1751,1764,'',''],
+['寛延','かんえん',1748,1751,'',''],
+['延享','えんきょう',1744,1748,'',''],
+['寛保','かんぽう',1741,1744,'',''],
+['元文','げんぶん',1736,1741,'',''],
+['享保','きょうほう',1716,1736,'','享保の改革。江戸期では最長の21年。'],
+['正徳','しょうとく',1711,1716,'',''],
+['宝永','ほうえい',1704,1711,'','宝永4年、富士山が噴火（宝永大噴火）。'],
+['元禄','げんろく',1688,1704,'','元禄文化、赤穂事件。'],
+['貞享','じょうきょう',1684,1688,'','渋川春海の貞享暦が施行。'],
+['天和','てんな',1681,1684,'',''],
+['延宝','えんぽう',1673,1681,'',''],
+['寛文','かんぶん',1661,1673,'',''],
+['万治','まんじ',1658,1661,'',''],
+['明暦','めいれき',1655,1658,'','明暦の大火（振袖火事）で江戸城天守が焼失。'],
+['承応','じょうおう',1652,1655,'',''],
+['慶安','けいあん',1648,1652,'',''],
+['正保','しょうほう',1644,1648,'',''],
+['寛永','かんえい',1624,1644,'','寛永通宝の鋳造、いわゆる鎖国の完成期。'],
+['元和','げんな',1615,1624,'','大坂夏の陣ののち戦が止み「元和偃武」と称された。'],
+['慶長','けいちょう',1596,1615,'','関ヶ原の戦い、江戸幕府の開府。'],
+['文禄','ぶんろく',1592,1596,'','文禄の役。'],
+['天正','てんしょう',1573,1592,'','本能寺の変、天正遣欧少年使節。'],
+['元亀','げんき',1570,1573,'','姉川の戦い、比叡山焼き討ち。'],
+['永禄','えいろく',1558,1570,'','桶狭間の戦い。'],
+['弘治','こうじ',1555,1558,'',''],
+['天文','てんぶん',1532,1555,'','鉄砲伝来（1543）、キリスト教伝来（1549）。'],
+['享禄','きょうろく',1528,1532,'',''],
+['大永','だいえい',1521,1528,'',''],
+['永正','えいしょう',1504,1521,'',''],
+['文亀','ぶんき',1501,1504,'',''],
+['明応','めいおう',1492,1501,'','明応の政変。'],
+['延徳','えんとく',1489,1492,'',''],
+['長享','ちょうきょう',1487,1489,'',''],
+['文明','ぶんめい',1469,1487,'','応仁の乱の終息、山城国一揆。'],
+['応仁','おうにん',1467,1469,'','応仁の乱。戦国時代の幕開け。'],
+['文正','ぶんしょう',1466,1467,'',''],
+['寛正','かんしょう',1460,1466,'','寛正の大飢饉。'],
+['長禄','ちょうろく',1457,1460,'',''],
+['康正','こうしょう',1455,1457,'',''],
+['享徳','きょうとく',1452,1455,'','享徳の乱、関東の戦国化が始まる。'],
+['宝徳','ほうとく',1449,1452,'',''],
+['文安','ぶんあん',1444,1449,'',''],
+['嘉吉','かきつ',1441,1444,'','嘉吉の乱。将軍足利義教が討たれる。'],
+['永享','えいきょう',1429,1441,'','永享の乱。'],
+['正長','しょうちょう',1428,1429,'','正長の土一揆。'],
+['応永','おうえい',1394,1428,'','一世一元以前では最長の35年。'],
+['明徳','めいとく',1390,1394,'北','明徳3年（1392）、南北朝が合一。'],
+['康応','こうおう',1389,1390,'北',''],
+['嘉慶','かきょう',1387,1389,'北',''],
+['至徳','しとく',1384,1387,'北',''],
+['元中','げんちゅう',1384,1392,'南','南朝最後の元号。'],
+['永徳','えいとく',1381,1384,'北',''],
+['弘和','こうわ',1381,1384,'南',''],
+['康暦','こうりゃく',1379,1381,'北',''],
+['天授','てんじゅ',1375,1381,'南',''],
+['永和','えいわ',1375,1379,'北',''],
+['文中','ぶんちゅう',1372,1375,'南',''],
+['建徳','けんとく',1370,1372,'南',''],
+['応安','おうあん',1368,1375,'北',''],
+['貞治','じょうじ',1362,1368,'北',''],
+['康安','こうあん',1361,1362,'北',''],
+['延文','えんぶん',1356,1361,'北',''],
+['文和','ぶんな',1352,1356,'北',''],
+['観応','かんのう',1350,1352,'北','観応の擾乱。'],
+['正平','しょうへい',1346,1370,'南','南朝最長の25年。'],
+['貞和','じょうわ',1345,1350,'北',''],
+['康永','こうえい',1342,1345,'北',''],
+['興国','こうこく',1340,1346,'南',''],
+['暦応','りゃくおう',1338,1342,'北','足利尊氏が征夷大将軍に。'],
+['延元','えんげん',1336,1340,'南','後醍醐天皇が吉野へ。南北朝の分立。'],
+['建武','けんむ',1334,1338,'','建武の新政。南朝は1336年まで、北朝は1338年まで用いた。'],
+['正慶','しょうけい',1332,1333,'北','北朝最初の元号。'],
+['元弘','げんこう',1331,1334,'南','元弘の乱。鎌倉幕府の滅亡。'],
+['元徳','げんとく',1329,1331,'',''],
+['嘉暦','かりゃく',1326,1329,'',''],
+['正中','しょうちゅう',1324,1326,'','正中の変。'],
+['元亨','げんこう',1321,1324,'',''],
+['元応','げんおう',1319,1321,'',''],
+['文保','ぶんぽう',1317,1319,'','文保の和談。'],
+['正和','しょうわ',1312,1317,'',''],
+['応長','おうちょう',1311,1312,'',''],
+['延慶','えんきょう',1308,1311,'',''],
+['徳治','とくじ',1306,1308,'',''],
+['嘉元','かげん',1303,1306,'',''],
+['乾元','けんげん',1302,1303,'',''],
+['正安','しょうあん',1299,1302,'',''],
+['永仁','えいにん',1293,1299,'','永仁の徳政令。'],
+['正応','しょうおう',1288,1293,'',''],
+['弘安','こうあん',1278,1288,'','弘安の役（元寇）。'],
+['建治','けんじ',1275,1278,'',''],
+['文永','ぶんえい',1264,1275,'','文永の役（元寇）。'],
+['弘長','こうちょう',1261,1264,'',''],
+['文応','ぶんおう',1260,1261,'',''],
+['正元','しょうげん',1259,1260,'',''],
+['正嘉','しょうか',1257,1259,'','正嘉の大飢饉。'],
+['康元','こうげん',1256,1257,'',''],
+['建長','けんちょう',1249,1256,'','鎌倉・建長寺の創建。'],
+['宝治','ほうじ',1247,1249,'','宝治合戦。'],
+['寛元','かんげん',1243,1247,'',''],
+['仁治','にんじ',1240,1243,'',''],
+['延応','えんおう',1239,1240,'',''],
+['暦仁','りゃくにん',1238,1239,'','わずか2か月余りで改元。'],
+['嘉禎','かてい',1235,1238,'',''],
+['文暦','ぶんりゃく',1234,1235,'',''],
+['天福','てんぷく',1233,1234,'',''],
+['貞永','じょうえい',1232,1233,'','御成敗式目（貞永式目）の制定。'],
+['寛喜','かんき',1229,1232,'','寛喜の大飢饉。'],
+['安貞','あんてい',1227,1229,'',''],
+['嘉禄','かろく',1225,1227,'',''],
+['元仁','げんにん',1224,1225,'',''],
+['貞応','じょうおう',1222,1224,'',''],
+['承久','じょうきゅう',1219,1222,'','承久の乱。'],
+['建保','けんぽう',1213,1219,'',''],
+['建暦','けんりゃく',1211,1213,'','鴨長明『方丈記』成る。'],
+['承元','じょうげん',1207,1211,'',''],
+['建永','けんえい',1206,1207,'',''],
+['元久','げんきゅう',1204,1206,'','『新古今和歌集』撰進。'],
+['建仁','けんにん',1201,1204,'',''],
+['正治','しょうじ',1199,1201,'',''],
+['建久','けんきゅう',1190,1199,'','源頼朝が征夷大将軍に。'],
+['文治','ぶんじ',1185,1190,'','守護・地頭の設置。'],
+['元暦','げんりゃく',1184,1185,'','壇ノ浦の戦い。'],
+['寿永','じゅえい',1182,1184,'','源平の争乱（治承・寿永の乱）。'],
+['養和','ようわ',1181,1182,'','養和の大飢饉。'],
+['治承','じしょう',1177,1181,'','鹿ケ谷の陰謀、以仁王の令旨。'],
+['安元','あんげん',1175,1177,'',''],
+['承安','じょうあん',1171,1175,'',''],
+['嘉応','かおう',1169,1171,'',''],
+['仁安','にんあん',1166,1169,'','平清盛が太政大臣に。'],
+['永万','えいまん',1165,1166,'',''],
+['長寛','ちょうかん',1163,1165,'',''],
+['応保','おうほう',1161,1163,'',''],
+['永暦','えいりゃく',1160,1161,'',''],
+['平治','へいじ',1159,1160,'','平治の乱。'],
+['保元','ほうげん',1156,1159,'','保元の乱。'],
+['久寿','きゅうじゅ',1154,1156,'',''],
+['仁平','にんぺい',1151,1154,'',''],
+['久安','きゅうあん',1145,1151,'',''],
+['天養','てんよう',1144,1145,'',''],
+['康治','こうじ',1142,1144,'',''],
+['永治','えいじ',1141,1142,'',''],
+['保延','ほうえん',1135,1141,'',''],
+['長承','ちょうしょう',1132,1135,'',''],
+['天承','てんしょう',1131,1132,'',''],
+['大治','だいじ',1126,1131,'',''],
+['天治','てんじ',1124,1126,'',''],
+['保安','ほうあん',1120,1124,'',''],
+['元永','げんえい',1118,1120,'',''],
+['永久','えいきゅう',1113,1118,'',''],
+['天永','てんえい',1110,1113,'',''],
+['天仁','てんにん',1108,1110,'','浅間山の大噴火。'],
+['嘉承','かじょう',1106,1108,'',''],
+['長治','ちょうじ',1104,1106,'',''],
+['康和','こうわ',1099,1104,'',''],
+['承徳','じょうとく',1097,1099,'',''],
+['永長','えいちょう',1096,1097,'',''],
+['嘉保','かほう',1094,1096,'',''],
+['寛治','かんじ',1087,1094,'',''],
+['応徳','おうとく',1084,1087,'','白河上皇の院政が始まる。'],
+['永保','えいほう',1081,1084,'',''],
+['承暦','じょうりゃく',1077,1081,'',''],
+['承保','じょうほう',1074,1077,'',''],
+['延久','えんきゅう',1069,1074,'','延久の荘園整理令。'],
+['治暦','じりゃく',1065,1069,'',''],
+['康平','こうへい',1058,1065,'','前九年の役の終結。'],
+['天喜','てんぎ',1053,1058,'','平等院鳳凰堂の落慶。'],
+['永承','えいしょう',1046,1053,'','前九年の役。'],
+['寛徳','かんとく',1044,1046,'',''],
+['長久','ちょうきゅう',1040,1044,'',''],
+['長暦','ちょうりゃく',1037,1040,'',''],
+['長元','ちょうげん',1028,1037,'','平忠常の乱。'],
+['万寿','まんじゅ',1024,1028,'',''],
+['治安','じあん',1021,1024,'',''],
+['寛仁','かんにん',1017,1021,'','藤原道長「この世をば」の望月の歌。'],
+['長和','ちょうわ',1012,1017,'',''],
+['寛弘','かんこう',1004,1012,'','紫式部『源氏物語』、清少納言の時代。'],
+['長保','ちょうほう',999,1004,'',''],
+['長徳','ちょうとく',995,999,'',''],
+['正暦','しょうりゃく',990,995,'',''],
+['永祚','えいそ',989,990,'','永祚の風と呼ばれる大暴風。'],
+['永延','えいえん',987,989,'',''],
+['寛和','かんな',985,987,'','源信『往生要集』成る。'],
+['永観','えいかん',983,985,'',''],
+['天元','てんげん',978,983,'',''],
+['貞元','じょうげん',976,978,'',''],
+['天延','てんえん',973,976,'',''],
+['天禄','てんろく',970,973,'',''],
+['安和','あんな',968,970,'','安和の変。藤原氏の他氏排斥が完成。'],
+['康保','こうほう',964,968,'',''],
+['応和','おうわ',961,964,'',''],
+['天徳','てんとく',957,961,'','天徳内裏歌合。'],
+['天暦','てんりゃく',947,957,'','「延喜・天暦の治」と称される。'],
+['天慶','てんぎょう',938,947,'','平将門・藤原純友の乱（承平天慶の乱）。'],
+['承平','じょうへい',931,938,'',''],
+['延長','えんちょう',923,931,'',''],
+['延喜','えんぎ',901,923,'','延喜の治。『古今和歌集』の時代。'],
+['昌泰','しょうたい',898,901,'','昌泰の変。菅原道真が大宰府へ。'],
+['寛平','かんぴょう',889,898,'','寛平の治、遣唐使の廃止。'],
+['仁和','にんな',885,889,'',''],
+['元慶','がんぎょう',877,885,'',''],
+['貞観','じょうがん',859,877,'','貞観地震（869）、応天門の変。'],
+['天安','てんあん',857,859,'',''],
+['斉衡','さいこう',854,857,'',''],
+['仁寿','にんじゅ',851,854,'',''],
+['嘉祥','かしょう',848,851,'',''],
+['承和','じょうわ',834,848,'','承和の変。'],
+['天長','てんちょう',824,834,'',''],
+['弘仁','こうにん',810,824,'','薬子の変。弘仁・貞観文化。'],
+['大同','だいどう',806,810,'',''],
+['延暦','えんりゃく',782,806,'','平安京遷都（794）。最澄・空海の入唐。'],
+['天応','てんおう',781,782,'',''],
+['宝亀','ほうき',770,781,'',''],
+['神護景雲','じんごけいうん',767,770,'','四文字の元号のひとつ。'],
+['天平神護','てんぴょうじんご',765,767,'','四文字の元号のひとつ。'],
+['天平宝字','てんぴょうほうじ',757,765,'','四文字の元号のひとつ。'],
+['天平勝宝','てんぴょうしょうほう',749,757,'','東大寺大仏の開眼供養。四文字の元号。'],
+['天平感宝','てんぴょうかんぽう',749,749,'','わずか3か月。749年は天平21年・天平感宝元年・天平勝宝元年の三つの呼び名を持つ。'],
+['天平','てんぴょう',729,749,'','天平文化。大仏造立の詔。'],
+['神亀','じんき',724,729,'',''],
+['養老','ようろう',717,724,'','養老律令。'],
+['霊亀','れいき',715,717,'',''],
+['和銅','わどう',708,715,'','武蔵国からの自然銅献上により改元。平城京遷都（710）。'],
+['慶雲','けいうん',704,708,'',''],
+['大宝','たいほう',701,704,'','大宝律令。以後、元号は今日まで途切れない。'],
+['朱鳥','しゅちょう',686,686,'','天武天皇崩御の年、数か月のみ。以後15年、元号が途絶える。'],
+['白雉','はくち',650,654,'','白い雉の献上を瑞兆として改元。'],
+['大化','たいか',645,650,'','日本最初の元号。大化の改新。'],
+];
+const ERAS = RAW.map(r=>({n:r[0],y:r[1],s:r[2],e:r[3]||NOWY,c:r[4]||'',o:r[5]||''}));
+const MAXY = ERAS[0].e, MINY = Math.min(...ERAS.map(e=>e.s));
+
+/* ===== 時代の区分 ===== */
+function period(s){
+  if(s>=1868)return '近代・現代'; if(s>=1603)return '江戸'; if(s>=1573)return '安土桃山';
+  if(s>=1467)return '戦国'; if(s>=1392)return '室町'; if(s>=1331)return '南北朝';
+  if(s>=1185)return '鎌倉'; if(s>=794)return '平安'; if(s>=710)return '奈良'; return '飛鳥';
+}
+const ERA_JUMPS=[['現代',9999],['江戸',1867],['戦国',1602],['室町',1466],['南北朝',1391],
+                 ['鎌倉',1330],['平安',1184],['奈良',793],['飛鳥',709]];
+const SY_JUMPS=[['現在',9999],[1800,1800],[1600,1600],[1400,1400],[1200,1200],[1000,1000],[800,800],[645,645]];
+
+/* ===== 干支 ===== */
+const KAN='甲乙丙丁戊己庚辛壬癸', SHI='子丑寅卯辰巳午未申酉戌亥';
+const KANY=['きのえ','きのと','ひのえ','ひのと','つちのえ','つちのと','かのえ','かのと','みずのえ','みずのと'];
+const SHIY=['ね','うし','とら','う','たつ','み','うま','ひつじ','さる','とり','いぬ','い'];
+const SHIA=['子（鼠）','丑（牛）','寅（虎）','卯（兎）','辰（龍）','巳（蛇）','午（馬）','未（羊）','申（猿）','酉（鶏）','戌（犬）','亥（猪）'];
+function eto(y){const a=(y-4)%10,b=(y-4)%12;
+  return `${KAN[a]}${SHI[b]}（${KANY[a]}${SHIY[b]}）・十二支は ${SHIA[b]}`;}
+
+/* ===== 表記ヘルパ ===== */
+const waStr = (era,n)=>`${era.n}${n===1?'元':n}年`;
+const seStr = y=>`${y}年`;
+const rangeStr = e=>e.e===NOWY&&e.n==='令和' ? `${e.s}–` : (e.s===e.e ? `${e.s}` : `${e.s}–${e.e}`);
+const $ = id=>document.getElementById(id);
+
+/* ===== 状態 ===== */
+const st = {eraIdx:0, eraY:Math.max(1,NOWY-ERAS[0].s+1), sy:NOWY, cand:0};
+
+/* ===== スクロール選択列 ===== */
+function buildPicker(el, items, sel, onPick){
+  const frag=document.createDocumentFragment();
+  items.forEach((it,i)=>{
+    const b=document.createElement('button');
+    b.className='pick'+(i===sel?' on':'');
+    b.innerHTML=`<span class="nm">${it.main}</span>`+
+      (it.yomi?`<span class="yo">${it.yomi}</span>`:'')+
+      (it.tag?`<span class="tag">${it.tag}</span>`:'')+
+      `<span class="rg num">${it.right||''}</span>`;
+    b.onclick=()=>onPick(i);
+    frag.appendChild(b);
+  });
+  el.innerHTML=''; el.appendChild(frag);
+  centerOn(el, sel);
+}
+function centerOn(el, i){
+  const on=el.children[i];
+  if(on) el.scrollTop = Math.max(0, on.offsetTop - el.clientHeight/2 + on.clientHeight/2);
+}
+function markPicker(el, sel, center){
+  const cur=el.querySelector('.pick.on'); if(cur) cur.classList.remove('on');
+  const nx=el.children[sel]; if(nx) nx.classList.add('on');
+  if(center) centerOn(el, sel);
+}
+function buildJumps(el, defs, onJump){
+  el.innerHTML='';
+  defs.forEach(([label,anchor])=>{
+    const b=document.createElement('button');
+    b.className='jump'; b.textContent=label;
+    b.onclick=()=>onJump(anchor);
+    el.appendChild(b);
+  });
+}
+
+/* ===== 上段：元号 → 西暦 ===== */
+function buildEra(){
+  buildPicker($('eraPick'), ERAS.map(e=>({
+    main:e.n, yomi:e.y, tag:e.c?e.c+'朝':'', right:rangeStr(e)
+  })), st.eraIdx, i=>{
+    st.eraIdx=i;
+    const era=ERAS[i], max=era.e-era.s+1;
+    st.eraY = (era.n==='令和') ? Math.min(max, NOWY-era.s+1) : max;
+    markPicker($('eraPick'), i, false);
+    buildEraYear(); render1();
+  });
+  buildJumps($('eraJump'), ERA_JUMPS, anchor=>{
+    const i=ERAS.findIndex(e=>e.s<=anchor);
+    const el=$('eraPick'), t=el.children[i<0?ERAS.length-1:i];
+    if(t) el.scrollTop=t.offsetTop;
+  });
+}
+function buildEraYear(){
+  const era=ERAS[st.eraIdx], max=era.e-era.s+1, list=[];
+  for(let n=max;n>=1;n--) list.push({main:(n===1?'元':n)+'年', right:`${era.s+n-1}`});
+  buildPicker($('eyPick'), list, max-st.eraY, i=>{
+    st.eraY=max-i; markPicker($('eyPick'), i, false); render1();
+  });
+}
+function render1(){
+  const era=ERAS[st.eraIdx], n=st.eraY, sy=era.s+n-1;
+  const wa=waStr(era,n), se=seStr(sy);
+  const box=$('r1'); box.classList.remove('fade'); void box.offsetWidth; box.classList.add('fade');
+  $('r1main').textContent=se;
+  $('r1sub').innerHTML=wa+(era.c?`<span class="gen">${era.c}朝</span>`:'')+(n===1?'<span class="gen">改元の年</span>':'');
+  $('r1eto').textContent='干支：'+eto(sy);
+  $('c1a').querySelector('.tx').textContent=`${se}（${wa}）`;
+  $('c1b').querySelector('.tx').textContent=`${wa}（${se}）`;
+  $('u1').innerHTML=`<span class="era-tag">${period(era.s)}時代</span><b>${era.n}（${era.y}）</b>`+
+    `　西暦 ${era.s}年〜${era.n==='令和'?'現在':era.e+'年'}、全${era.e-era.s+1}年。`+
+    (era.c?`　${era.c}朝の元号。`:'')+(era.o?`　${era.o}`:'');
+}
+
+/* ===== 下段：西暦 → 元号 ===== */
+function candsOf(y){
+  const r=[]; ERAS.forEach(e=>{ if(y>=e.s && y<=e.e) r.push({era:e, n:y-e.s+1}); }); return r;
+}
+function buildSy(){
+  const list=[];
+  for(let y=MAXY;y>=MINY;y--){
+    const c=candsOf(y)[0];
+    list.push({main:y+'年', right:c?waStr(c.era,c.n):'元号なし'});
+  }
+  buildPicker($('syPick'), list, MAXY-st.sy, i=>setSy(MAXY-i,false));
+  buildJumps($('syJump'), SY_JUMPS, anchor=>{
+    const y=Math.min(MAXY,Math.max(MINY,anchor));
+    const el=$('syPick'), t=el.children[MAXY-y];
+    if(t) el.scrollTop=t.offsetTop;
+  });
+}
+function setSy(y, center){
+  y=Math.min(MAXY, Math.max(MINY, y|0));
+  st.sy=y; st.cand=0; $('syInput').value=y;
+  markPicker($('syPick'), MAXY-y, center);
+  render2();
+}
+function render2(){
+  const cs=candsOf(st.sy), cbox=$('r2cands'), note=$('r2note');
+  const box=$('r2'); box.classList.remove('fade'); void box.offsetWidth; box.classList.add('fade');
+  $('r2eto').textContent='干支：'+eto(st.sy);
+
+  if(cs.length===0){                     /* 元号のない空白期 */
+    note.style.display='block';
+    note.textContent='※ この年は元号が用いられていません（655〜685年／687〜700年）。';
+    cbox.style.display='none';
+    $('r2main').textContent='元号なし';
+    $('r2sub').textContent=seStr(st.sy);
+    ['c2a','c2b'].forEach(id=>{ $(id).disabled=true; $(id).querySelector('.tx').textContent='—'; });
+    $('u2').innerHTML=`<span class="era-tag">飛鳥時代</span>白雉5年（654年）で元号が途絶え、朱鳥元年（686年）の数か月を除いて、大宝元年（701年）まで元号のない時代が続きました。`;
+    return;
+  }
+  ['c2a','c2b'].forEach(id=>$(id).disabled=false);
+
+  if(cs.length>1){
+    const courts=cs.filter(c=>c.era.c).length;
+    note.style.display='block';
+    note.textContent = courts>=2
+      ? `※ ${st.sy}年は南北朝時代。南朝と北朝で元号が異なります。`
+      : `※ ${st.sy}年は改元の年。二つ以上の呼び方があります。`;
+    cbox.style.display='flex'; cbox.innerHTML='';
+    cs.forEach((c,i)=>{
+      const b=document.createElement('button');
+      b.className='cand'+(i===st.cand?' on':'');
+      b.textContent=waStr(c.era,c.n)+(c.era.c?`（${c.era.c}朝）`:'');
+      b.onclick=()=>{ st.cand=i; render2(); };
+      cbox.appendChild(b);
+    });
+  }else{ note.style.display='none'; cbox.style.display='none'; }
+
+  const c=cs[Math.min(st.cand,cs.length-1)];
+  const wa=waStr(c.era,c.n), se=seStr(st.sy);
+  $('r2main').innerHTML=wa+(c.era.c?`<span class="gen">${c.era.c}朝</span>`:'')+(c.n===1?'<span class="gen">改元の年</span>':'');
+  $('r2sub').textContent=se;
+  $('c2a').querySelector('.tx').textContent=`${se}（${wa}）`;
+  $('c2b').querySelector('.tx').textContent=`${wa}（${se}）`;
+  $('u2').innerHTML=`<span class="era-tag">${period(c.era.s)}時代</span><b>${c.era.n}（${c.era.y}）</b>`+
+    `　西暦 ${c.era.s}年〜${c.era.n==='令和'?'現在':c.era.e+'年'}、全${c.era.e-c.era.s+1}年。`+
+    (c.era.c?`　${c.era.c}朝の元号。`:'')+(c.era.o?`　${c.era.o}`:'');
+}
+
+/* ===== コピー ===== */
+function copy(btn){
+  if(btn.disabled) return;
+  const text=btn.querySelector('.tx').textContent;
+  const done=()=>{
+    btn.classList.add('done'); btn.querySelector('.tx').textContent='✓ コピーしました';
+    setTimeout(()=>{ btn.classList.remove('done'); render1(); render2(); },1400);
+  };
+  if(navigator.clipboard && window.isSecureContext){
+    navigator.clipboard.writeText(text).then(done).catch(()=>fallback(text,done));
+  }else fallback(text,done);
+}
+function fallback(text,done){
+  const ta=document.createElement('textarea');
+  ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try{ document.execCommand('copy'); done(); }catch(e){ alert('コピーできませんでした：'+text); }
+  document.body.removeChild(ta);
+}
+['c1a','c1b','c2a','c2b'].forEach(id=>$(id).addEventListener('click',()=>copy($(id))));
+
+/* ===== 起動 ===== */
+$('syInput').min=MINY; $('syInput').max=MAXY;
+$('syInput').addEventListener('input',e=>{
+  const v=parseInt(e.target.value,10);
+  if(!isNaN(v)&&v>=MINY&&v<=MAXY){ st.sy=v; st.cand=0; markPicker($('syPick'), MAXY-v, true); render2(); }
+});
+$('syInput').addEventListener('blur',()=>setSy(parseInt($('syInput').value,10)||NOWY,true));
+/* 元号列のジャンプ行の高さぶん、年の列を下げて上端をそろえる */
+function alignYearCol(){
+  const h=$('eraJump').offsetHeight;
+  $('eyPick').style.marginTop = (window.innerWidth>900 ? h+10 : 0)+'px';
+}
+window.addEventListener('resize',alignYearCol);
+
+buildEra(); buildEraYear(); render1();
+buildSy(); setSy(NOWY,true); alignYearCol();
+</script>
+</body>
+</html>
