@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>歳華往還 ｜ 和暦⇄西暦コンバータ</title>
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALJSURBVDhPjZJLTBNhFIW7cU/iyoWKvCx0ppVH6XQ0unOhibjQREyIjwUBDQQiCBgEDIaoCSvZ+NioCxWFoqXTlhYQeRXaQmlBUMDKtBCSvigtSGngmPkhVEh8THKSO+effHPuvb/oSaZon04ufugouzlpq6l0jdVV8dbbxby1vIgfu1fF22oreEtpAT965xYvnNlqKlzm67nTuvTE590yWZyIk6c9GjlOw9OuQtDUB1+XHgiHgEiE1IInPGszX+Hr7sCyxQRnUyOGM5OhVUhUIq2C+tHN0tBkpMBcUoChwqvg295h8ZMRpvw8jFSWIDBhx5fGBpiL8zGYn4d2WSKMLA1OIQmLOCXlNjISqKUJmHv/GpvRKFbcPFwfW8ifV+fd4FubsbmxgdUFN6YeN+JDygEYWFpIEBBxijS+k5XCWl4ES2khws5ZeEz9GLpxDZFAAAt6zXbth1vTRlKaCq6gI0ssAPwijVzMd7I0PIO9CNhHEQ2HsObzwjdixsZ6BD8XF3ZqIcHSuB3ON6+gkx7ZAnAMxRsZCloljd7L5xGec8Iz0IeeC2ew5vWCVzXj88WziK6EMdf6Ft05p8FliWFUkha2Admp0J04Bs9gH3zWYXiG+uEdHsRGJIKVeRfxPUMD8NusZE5qKn43wJB1lPQpTNrRUAt7fTUc9dVYX1rCYk8XRqvL4Lh/F+MP6sg3vZfOQZ+ZEgPo6Xh8e9qE0Ow0gpPjCE5OEG1G17Hm9WBpwo7g1JYX+j5DVqul4mOATlZG+mpPT0K7LAFqOh5qySFEl5cx++IZWg7GEZ8oPRmcPBVGVvo7gLzsiMtOI7KUFqA3NweaDHLrYmIksRloGYmLAIRN7JGaOkxSCRvae7YL0PUHwN8kALausoJ6OXoqgxj/K4OShuVkOjhGMiBqlYv3GxhaZWRpn5aR+IVY/5JBSfmNrLRHx6Ql/QLSlJIA8uk0NwAAAABJRU5ErkJggg==">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+:root{
+  --su:#1C1A17; --usu:#7A7268; --kami:#FDFCF8; --ji:#F7F4EC;
+  --sen:#E3DDD0; --shu:#B7382C; --ai:#2E4159; --r:8px;
+  --mincho:"Yu Mincho","YuMincho","Hiragino Mincho ProN","Noto Serif JP","Shippori Mincho",serif;
+  --gothic:system-ui,-apple-system,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--ji);color:var(--su);font-family:var(--gothic);font-size:18px;line-height:1.8;
+  -webkit-font-smoothing:antialiased;font-feature-settings:"palt";padding:0 0 72px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+.num{font-variant-numeric:tabular-nums}
+
+/* ---- 表紙 ---- */
+header{padding:64px 0 40px;border-bottom:1px solid var(--sen);margin-bottom:48px}
+.mark{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.seal{width:58px;height:58px;flex:none;background:var(--shu);border-radius:4px;color:#fff;
+  font-family:var(--mincho);font-size:21px;line-height:1.35;letter-spacing:.08em;
+  writing-mode:vertical-rl;display:grid;place-items:center;padding-top:2px}
+.title{font-family:var(--mincho);font-size:48px;font-weight:600;letter-spacing:.22em;line-height:1.25}
+.title .dot{color:var(--shu)}
+.yomi-t{font-family:var(--mincho);font-size:15px;color:var(--usu);letter-spacing:.3em;margin-top:6px}
+.lead{margin-top:26px;font-size:17px;color:var(--usu);max-width:60ch;line-height:2}
+.lead b{color:var(--su);font-weight:600}
+
+/* ---- 入口カード ---- */
+.gates{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:56px}
+.gate{position:relative;display:block;background:var(--kami);border:1px solid var(--sen);
+  border-radius:var(--r);padding:30px 32px 28px;text-decoration:none;color:var(--su);
+  transition:border-color .18s ease,transform .18s ease}
+.gate::before{content:"";position:absolute;left:0;top:22px;bottom:22px;width:3px;
+  background:var(--shu);border-radius:3px 0 0 3px;opacity:.85;transition:top .18s ease,bottom .18s ease}
+.gate:hover{border-color:var(--shu);transform:translateY(-2px)}
+.gate:hover::before{top:14px;bottom:14px}
+.gate .n{font-family:var(--mincho);font-size:13.5px;color:var(--shu);letter-spacing:.2em}
+.gate h2{font-family:var(--mincho);font-size:27px;font-weight:600;letter-spacing:.1em;margin:6px 0 10px}
+.gate .kind{display:inline-block;font-family:var(--mincho);font-size:12.5px;color:#fff;
+  background:var(--shu);border-radius:4px;padding:2px 10px;letter-spacing:.14em}
+.gate .kind.sub{background:var(--ai)}
+.gate .range{font-family:var(--mincho);font-size:15px;color:var(--su);margin:14px 0 4px;
+  padding-top:14px;border-top:1px solid var(--sen);font-variant-numeric:tabular-nums}
+.gate p{font-size:15px;color:var(--usu);line-height:1.9;margin-top:6px}
+.gate .go{margin-top:18px;font-family:var(--mincho);font-size:15.5px;color:var(--shu);letter-spacing:.1em}
+.gate .go span{display:inline-block;transition:transform .18s ease}
+.gate:hover .go span{transform:translateX(5px)}
+
+/* ---- 節 ---- */
+.sec{margin-bottom:52px}
+.sec-h{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
+  padding-bottom:14px;border-bottom:1px solid var(--su);margin-bottom:26px}
+.sec-h h3{font-family:var(--mincho);font-size:23px;font-weight:600;letter-spacing:.12em}
+.sec-h .en{font-size:11.5px;letter-spacing:.2em;color:var(--usu)}
+
+/* 名の由来 */
+.origin{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.orig{background:var(--kami);border:1px solid var(--sen);border-radius:var(--r);padding:24px 26px}
+.orig .ch{font-family:var(--mincho);font-size:34px;letter-spacing:.14em;color:var(--shu);line-height:1.2}
+.orig .rd{font-family:var(--mincho);font-size:12.5px;color:var(--usu);letter-spacing:.24em;margin-top:4px}
+.orig p{font-size:15.5px;color:var(--usu);line-height:1.95;margin-top:14px;
+  padding-top:14px;border-top:1px solid var(--sen)}
+
+/* 蘊蓄 */
+.facts{columns:2;column-gap:36px}
+.fact{break-inside:avoid;display:flex;gap:14px;padding:14px 0;border-bottom:1px solid var(--sen)}
+.fact .no{flex:none;width:1.6em;font-family:var(--mincho);font-size:15px;color:var(--shu);
+  letter-spacing:.06em;padding-top:2px}
+.fact .tx{font-size:15.5px;color:var(--usu);line-height:1.9}
+.fact .tx b{color:var(--su);font-weight:600;font-family:var(--mincho);letter-spacing:.04em}
+.tally{margin-top:26px;background:var(--kami);border:1px solid var(--sen);border-radius:var(--r);
+  padding:22px 26px;font-size:15px;color:var(--usu);line-height:2}
+.tally .row{display:flex;gap:16px;flex-wrap:wrap;align-items:baseline}
+.tally .k{font-family:var(--mincho);font-size:15px;color:var(--su);letter-spacing:.1em;min-width:7.5em}
+.tally .v{font-variant-numeric:tabular-nums}
+.tally .v em{font-style:normal;font-family:var(--mincho);color:var(--shu);font-size:17px;padding:0 2px}
+
+footer{margin-top:8px;padding-top:24px;border-top:1px solid var(--sen);
+  font-size:13.5px;color:var(--usu);line-height:1.9}
+footer a{color:var(--shu);text-decoration:underline;text-underline-offset:3px}
+.sig{margin-top:26px;padding-top:20px;border-top:1px solid var(--sen);
+  font-family:var(--mincho);font-size:17px;font-weight:700;color:var(--su);letter-spacing:.1em}
+
+@media (max-width:880px){
+  .gates,.origin{grid-template-columns:1fr}
+  .facts{columns:1}
+  .title{font-size:36px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="mark">
+    <div class="seal">歳華</div>
+    <div>
+      <h1 class="title">歳華往還<span class="dot">・</span></h1>
+      <div class="yomi-t">さいか おうかん ／ 和暦 ⇄ 西暦</div>
+    </div>
+  </div>
+  <p class="lead">
+    西暦は、はじまりの一点から数えつづける一本の線。元号は、代が替わり、災いが起こり、瑞兆が現れるたびに
+    数え直される、<b>幾度も結び目のある紐</b>です。そのあいだを行き来するための、二つの入口を用意しました。
+  </p>
+</header>
+
+<!-- ===== 二つの入口 ===== -->
+<div class="gates">
+  <a class="gate" href="saika-oukan.html">
+    <div class="n">其の一</div>
+    <h2>年単位で、すべての元号を</h2>
+    <span class="kind">年単位 簡易版</span>
+    <div class="range">大化元年（645年） 〜 令和　／　248の元号</div>
+    <p>
+      日本最初の元号から今日まで、千三百八十余年をひと続きに収めました。
+      南北朝の南朝・北朝が並び立った年も、元号が使われなかった空白の年も、そのまま表示します。
+      時代ボタンで飛鳥まで一跳び。
+    </p>
+    <div class="go"><span>→</span>　ひらく</div>
+  </a>
+
+  <a class="gate" href="saika-oukan-strict.html">
+    <div class="n">其の二</div>
+    <h2>一日単位で、厳密に</h2>
+    <span class="kind sub">年月日 厳密換算版</span>
+    <div class="range">明治6年（1873年）1月1日 〜 令和81年（2099年）</div>
+    <p>
+      改元は年の途中に起こります。昭和64年は1月7日まで、平成31年は4月30日まで。
+      この版は改元の日付そのものを持ち、年・月・日を指定して一日の狂いなく換算します。
+      曜日と干支も添えて。
+    </p>
+    <div class="go"><span>→</span>　ひらく</div>
+  </a>
+</div>
+
+<!-- ===== 名の由来 ===== -->
+<section class="sec">
+  <div class="sec-h"><h3>名の由来</h3><span class="en">ORIGIN OF THE NAME</span></div>
+  <div class="origin">
+    <div class="orig">
+      <div class="ch">歳 華</div>
+      <div class="rd">さ い か</div>
+      <p>
+        歳月・年月をさす雅語。「華」は花の意から転じて、過ぎゆく時の輝きをいいます。
+        歳華とは、数えられる年数ではなく、味わわれる年月のこと。
+      </p>
+    </div>
+    <div class="orig">
+      <div class="ch">往 還</div>
+      <div class="rd">お う か ん</div>
+      <p>
+        行って、還ること。江戸期には街道そのものを指す言葉でもありました（甲州往還など）。
+        和暦と西暦のあいだに通した、一本の道のつもりです。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 蘊蓄 ===== -->
+<section class="sec">
+  <div class="sec-h"><h3>元号のこと、すこし</h3><span class="en">TEN NOTES ON JAPANESE ERA NAMES</span></div>
+  <div class="facts">
+    <div class="fact"><div class="no">一</div><div class="tx">
+      日本最初の元号は<b>大化</b>。西暦645年、いわゆる大化の改新の年に建てられました。</div></div>
+    <div class="fact"><div class="no">二</div><div class="tx">
+      248の元号は、わずか<b>73種類の漢字</b>でできています。同じ字を組み替えながら千年以上を数えてきました。</div></div>
+    <div class="fact"><div class="no">三</div><div class="tx">
+      最も多く使われた字は<b>「永」で29回</b>。次いで「元」「天」が27回、「治」21回、「応」「和」が20回。
+      いずれも、長く安らかであれという願いの字です。</div></div>
+    <div class="fact"><div class="no">四</div><div class="tx">
+      元号は二文字と決まっているようでいて、<b>四文字のものが5つ</b>あります。天平感宝・天平勝宝・天平宝字・天平神護・神護景雲。すべて奈良時代、聖武天皇と孝謙天皇の御代に集中しています。</div></div>
+    <div class="fact"><div class="no">五</div><div class="tx">
+      いちばん長いのは<b>昭和</b>。いちばん短いのは<b>朱鳥</b>と<b>天平感宝</b>で、どちらも数か月で終わりました。
+      749年にいたっては、天平21年・天平感宝元年・天平勝宝元年という<b>三つの呼び名</b>を持ちます。</div></div>
+    <div class="fact"><div class="no">六</div><div class="tx">
+      一代の天皇に一つの元号という<b>一世一元</b>は明治から。それ以前の平均はおよそ<b>6.6年</b>で、
+      災害、吉兆、天皇の代替わりのたびに改まりました。</div></div>
+    <div class="fact"><div class="no">七</div><div class="tx">
+      辛酉の年には革命が、甲子の年には政変が起こるとする<b>讖緯（しんい）の説</b>により、
+      その年が来るたびに改元する習わしがありました。延喜への改元（901年・辛酉）はその一例です。</div></div>
+    <div class="fact"><div class="no">八</div><div class="tx">
+      南北朝の約60年間は、吉野の<b>南朝で9つ</b>、京都の<b>北朝で17</b>の元号が並び立ちました。
+      同じ日に二つの年号があったことになります。</div></div>
+    <div class="fact"><div class="no">九</div><div class="tx">
+      <b>655〜685年</b>と<b>687〜700年</b>は、元号が使われなかった空白期。
+      大宝元年（701年）からのち、元号は今日まで一度も途切れていません。</div></div>
+    <div class="fact"><div class="no">十</div><div class="tx">
+      改元当日が二通りに書ける日は、太陽暦になってからは<b>二日だけ</b>。
+      1912年7月30日（明治45年＝大正元年）と、1926年12月25日（大正15年＝昭和元年）です。</div></div>
+  </div>
+
+  <div class="tally">
+    <div class="row"><span class="k">収録元号</span><span class="v"><em>248</em>（南朝 9・北朝 17 を含む）</span></div>
+    <div class="row"><span class="k">収録年数</span><span class="v">西暦645年から <em>1382</em> 年ぶん</span></div>
+    <div class="row"><span class="k">異なり漢字</span><span class="v"><em>73</em> 字</span></div>
+    <div class="row"><span class="k">一元号の平均</span><span class="v"><em>6.6</em> 年</span></div>
+    <div class="row"><span class="k">長い元号</span><span class="v">昭和 64年 ／ 明治 45年 ／ 応永 35年 ／ 平成 31年 ／ 延暦・正平 25年</span></div>
+  </div>
+</section>
+
+<footer>
+  ※ 数字はいずれも、本コンバータが収録する248元号を実際に数えたものです。元号の年の対応は通説により、読みは通行の一例によります。<br>
+  ※ 明治5年（1872年）12月2日までは太陰太陽暦のため、和暦と西暦の年始は1〜2か月ずれます。年単位の対応は
+  <a href="saika-oukan.html">簡易版</a>、日単位の厳密な換算は
+  <a href="saika-oukan-strict.html">厳密換算版</a> をお使いください。
+  <p class="sig">歳華往還 ＜和暦⇄西暦コンバータ＞ @soranoiro.net</p>
+</footer>
+
+</div>
+</body>
+</html>
