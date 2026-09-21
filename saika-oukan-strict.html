@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>歳華往還 ｜ 和暦⇄西暦（年月日 厳密換算）</title>
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+<link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALJSURBVDhPjZJLTBNhFIW7cU/iyoWKvCx0ppVH6XQ0unOhibjQREyIjwUBDQQiCBgEDIaoCSvZ+NioCxWFoqXTlhYQeRXaQmlBUMDKtBCSvigtSGngmPkhVEh8THKSO+effHPuvb/oSaZon04ufugouzlpq6l0jdVV8dbbxby1vIgfu1fF22oreEtpAT965xYvnNlqKlzm67nTuvTE590yWZyIk6c9GjlOw9OuQtDUB1+XHgiHgEiE1IInPGszX+Hr7sCyxQRnUyOGM5OhVUhUIq2C+tHN0tBkpMBcUoChwqvg295h8ZMRpvw8jFSWIDBhx5fGBpiL8zGYn4d2WSKMLA1OIQmLOCXlNjISqKUJmHv/GpvRKFbcPFwfW8ifV+fd4FubsbmxgdUFN6YeN+JDygEYWFpIEBBxijS+k5XCWl4ES2khws5ZeEz9GLpxDZFAAAt6zXbth1vTRlKaCq6gI0ssAPwijVzMd7I0PIO9CNhHEQ2HsObzwjdixsZ6BD8XF3ZqIcHSuB3ON6+gkx7ZAnAMxRsZCloljd7L5xGec8Iz0IeeC2ew5vWCVzXj88WziK6EMdf6Ft05p8FliWFUkha2Admp0J04Bs9gH3zWYXiG+uEdHsRGJIKVeRfxPUMD8NusZE5qKn43wJB1lPQpTNrRUAt7fTUc9dVYX1rCYk8XRqvL4Lh/F+MP6sg3vZfOQZ+ZEgPo6Xh8e9qE0Ow0gpPjCE5OEG1G17Hm9WBpwo7g1JYX+j5DVqul4mOATlZG+mpPT0K7LAFqOh5qySFEl5cx++IZWg7GEZ8oPRmcPBVGVvo7gLzsiMtOI7KUFqA3NweaDHLrYmIksRloGYmLAIRN7JGaOkxSCRvae7YL0PUHwN8kALausoJ6OXoqgxj/K4OShuVkOjhGMiBqlYv3GxhaZWRpn5aR+IVY/5JBSfmNrLRHx6Ql/QLSlJIA8uk0NwAAAABJRU5ErkJggg==">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+:root{
+  --su:#1C1A17; --usu:#7A7268; --kami:#FDFCF8; --ji:#F7F4EC;
+  --sen:#E3DDD0; --shu:#B7382C; --ai:#2E4159; --r:8px;
+  --mincho:"Yu Mincho","YuMincho","Hiragino Mincho ProN","Noto Serif JP","Shippori Mincho",serif;
+  --gothic:system-ui,-apple-system,"Segoe UI","Hiragino Sans","Noto Sans JP",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:var(--ji); color:var(--su); font-family:var(--gothic); font-size:18px;
+  line-height:1.8; -webkit-font-smoothing:antialiased; font-feature-settings:"palt"; padding:0 0 72px;
+}
+.num{font-variant-numeric:tabular-nums}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+
+/* ---- header ---- */
+header{border-bottom:1px solid var(--sen);padding:48px 0 34px;margin-bottom:44px}
+.title{font-family:var(--mincho);font-size:44px;font-weight:600;letter-spacing:.22em;line-height:1.3}
+.title .dot{color:var(--shu)}
+.yomi-t{font-family:var(--mincho);font-size:15px;color:var(--usu);letter-spacing:.3em;margin-top:6px}
+.kind{display:inline-block;font-family:var(--mincho);font-size:13px;color:#fff;background:var(--shu);
+  border-radius:4px;padding:2px 10px;letter-spacing:.14em;margin-top:14px}
+.lead{margin-top:14px;font-size:16px;color:var(--usu);max-width:64ch;line-height:1.9}
+.lead b{color:var(--su);font-weight:600}
+.lead a,.old-link a{color:var(--shu);text-decoration:underline;text-underline-offset:3px}
+
+/* ---- card ---- */
+.card{position:relative;background:var(--kami);border:1px solid var(--sen);border-radius:var(--r);
+  padding:32px 34px 34px;margin-bottom:32px}
+.card::before{content:"";position:absolute;left:0;top:24px;bottom:24px;width:3px;
+  background:var(--shu);border-radius:3px 0 0 3px}
+.card-h{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
+  padding-bottom:18px;border-bottom:1px solid var(--sen);margin-bottom:24px}
+.card-h .n{font-family:var(--mincho);font-size:14px;color:var(--shu);letter-spacing:.2em}
+.card-h h2{font-family:var(--mincho);font-size:26px;font-weight:600;letter-spacing:.12em}
+.card-h .memo{font-size:14px;color:var(--usu)}
+
+/* ---- inputs ---- */
+.inputs{display:grid;gap:20px;align-items:start}
+.g1{grid-template-columns:1.2fr .75fr .6fr .6fr}
+.g2{grid-template-columns:1.2fr .6fr .6fr}
+.col > .lab{font-size:12px;letter-spacing:.2em;color:var(--usu);margin-bottom:10px;display:flex;
+  align-items:center;gap:10px;min-height:22px}
+.today{font:inherit;font-family:var(--mincho);font-size:12.5px;background:var(--kami);
+  border:1px solid var(--sen);border-radius:6px;padding:2px 9px;color:var(--usu);cursor:pointer;
+  letter-spacing:.06em;transition:.15s ease}
+.today:hover{border-color:var(--shu);color:var(--shu)}
+
+.picker{position:relative;height:214px;overflow-y:auto;border:1px solid var(--sen);
+  border-radius:var(--r);background:var(--ji);scrollbar-width:thin}
+.picker::-webkit-scrollbar{width:8px}
+.picker::-webkit-scrollbar-thumb{background:#D8D1C2;border-radius:8px}
+.pick{position:relative;display:flex;align-items:baseline;gap:8px;width:100%;text-align:left;
+  background:none;border:none;border-bottom:1px solid var(--sen);padding:10px 12px 10px 18px;
+  font:inherit;font-size:16px;color:var(--su);cursor:pointer;transition:background .15s ease,color .15s ease}
+.pick:hover{background:rgba(28,26,23,.05)}
+.pick::before{content:"";position:absolute;left:0;top:7px;bottom:7px;width:0;background:var(--shu);transition:width .16s ease}
+.pick.on{background:var(--kami);color:var(--shu)}
+.pick.on::before{width:3px}
+.pick .nm{font-family:var(--mincho);font-size:18px;letter-spacing:.04em;white-space:nowrap}
+.pick .yo{font-size:11.5px;color:var(--usu);white-space:nowrap}
+.pick.on .yo{color:var(--shu);opacity:.7}
+.pick .rg{margin-left:auto;font-size:12px;color:var(--usu);white-space:nowrap;padding-left:6px}
+.pick.on .rg{color:var(--shu);opacity:.7}
+.hint{font-size:12.5px;color:var(--usu);margin-top:8px;line-height:1.7}
+
+.fld{width:100%;font:inherit;font-family:var(--mincho);font-size:22px;letter-spacing:.04em;
+  padding:11px 13px;border:1px solid var(--sen);border-radius:var(--r);background:var(--kami);
+  color:var(--su);font-variant-numeric:tabular-nums}
+.fld:focus{outline:none;border-color:var(--shu)}
+.selwrap{position:relative}
+.selwrap::after{content:"▾";position:absolute;right:13px;top:50%;transform:translateY(-50%);
+  color:var(--usu);font-size:12px;pointer-events:none}
+select.fld{appearance:none;-webkit-appearance:none;padding-right:30px;cursor:pointer}
+
+/* ---- result（入力の下） ---- */
+.result{margin-top:28px;border:1px solid var(--sen);border-radius:var(--r);background:var(--ji);
+  padding:26px 28px}
+.res-main{font-family:var(--mincho);font-size:44px;font-weight:600;letter-spacing:.04em;
+  color:var(--shu);line-height:1.3;font-variant-numeric:tabular-nums}
+.res-sub{font-family:var(--mincho);font-size:21px;color:var(--su);margin-top:6px;letter-spacing:.06em}
+.res-eto{font-size:14px;color:var(--usu);margin-top:12px;padding-top:13px;border-top:1px solid var(--sen);line-height:1.9}
+.fade{animation:up .3s ease-out both}
+@keyframes up{from{opacity:0;transform:translateY(2px)}to{opacity:1;transform:none}}
+.gen{display:inline-block;font-size:12px;color:#fff;background:var(--ai);border-radius:4px;
+  padding:1px 7px;margin-left:8px;vertical-align:middle;letter-spacing:.08em;font-family:var(--gothic)}
+.cands{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.cand{font:inherit;font-size:14.5px;font-family:var(--mincho);background:var(--kami);color:var(--usu);
+  border:1px solid var(--sen);border-radius:var(--r);padding:6px 13px;cursor:pointer;transition:.15s ease}
+.cand.on{border-color:var(--shu);color:var(--shu)}
+.split-note{font-size:13px;color:var(--ai);margin-bottom:12px;line-height:1.7}
+.err{border:1px solid var(--shu);background:#FBF3F1;border-radius:var(--r);padding:15px 18px;
+  color:var(--shu);font-size:15.5px;line-height:1.8;margin-bottom:4px}
+
+/* ---- copy（結果の下・3つ） ---- */
+.copies{margin-top:20px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.copy{position:relative;display:block;width:100%;font:inherit;font-size:16px;text-align:left;
+  background:var(--kami);border:1px solid var(--sen);border-radius:var(--r);padding:12px 16px 13px;
+  cursor:pointer;color:var(--su);transition:border-color .15s ease,background .15s ease,color .15s ease}
+.copy:hover{border-color:var(--shu)}
+.copy:disabled{opacity:.45;cursor:default;border-color:var(--sen)}
+.copy .fm{display:block;font-size:11.5px;letter-spacing:.14em;color:var(--usu);margin-bottom:3px}
+.copy .row{display:flex;align-items:center;gap:10px}
+.copy .ic{font-size:14px;color:var(--usu);flex:none}
+.copy .tx{font-family:var(--mincho);font-size:17px;letter-spacing:.04em;font-variant-numeric:tabular-nums;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.copy.done{background:var(--shu);border-color:var(--shu);color:#fff}
+.copy.done .ic,.copy.done .fm{color:rgba(255,255,255,.8)}
+
+/* ---- unchiku / footer ---- */
+.unchiku{margin-top:22px;padding-top:18px;border-top:1px solid var(--sen);
+  font-size:14.5px;color:var(--usu);line-height:1.95}
+.unchiku b{font-family:var(--mincho);color:var(--su);font-weight:600;letter-spacing:.06em}
+.unchiku .era-tag{display:inline-block;font-size:12px;color:var(--ai);border:1px solid var(--sen);
+  border-radius:4px;padding:0 7px;margin-right:8px;background:var(--ji)}
+.old-link{margin-bottom:32px;font-size:14.5px;color:var(--usu)}
+footer{margin-top:44px;padding-top:24px;border-top:1px solid var(--sen);font-size:13.5px;color:var(--usu);line-height:1.9}
+.sig{margin-top:26px;padding-top:20px;border-top:1px solid var(--sen);
+  font-family:var(--mincho);font-size:17px;font-weight:700;color:var(--su);letter-spacing:.1em}
+
+@media (max-width:900px){
+  .g1,.g2{grid-template-columns:1fr 1fr}
+  .copies{grid-template-columns:1fr}
+  .title{font-size:34px}
+  .res-main{font-size:34px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1 class="title">歳華往還<span class="dot">・</span></h1>
+  <div class="yomi-t">さいか おうかん ／ 和暦 ⇄ 西暦</div>
+  <div class="kind">年月日 厳密換算版</div>
+  <p class="lead">
+「歳華」は歳月の雅語、「往還」は行き来のこと。<b>太陽暦以降、改元日で厳密換算。</b>
+上段：元号→西暦、下段：西暦→元号。形式①～③ボタンでクリップボードへコピー。
+  </p>
+</header>
+
+<!-- ============ 其の一：元号 → 西暦 ============ -->
+<section class="card">
+  <div class="card-h">
+    <span class="n">其の一</span><h2>元号 → 西暦</h2>
+    <span class="memo">元号・年・月・日を指定すると、その日の西暦が出ます</span>
+  </div>
+  <div class="inputs g1">
+    <div class="col">
+      <span class="lab">ERA ／ 元号</span>
+      <div class="picker" id="eraPick"></div>
+      <p class="hint">↓ 下へスクロールで古い元号へ</p>
+    </div>
+    <div class="col">
+      <span class="lab">YEAR ／ 年 <button class="today" id="today1">今日</button></span>
+      <div class="picker" id="eyPick"></div>
+      <p class="hint">↓ 下へで古い年へ</p>
+    </div>
+    <div class="col">
+      <span class="lab">MONTH ／ 月</span>
+      <div class="selwrap"><select class="fld" id="m1"></select></div>
+    </div>
+    <div class="col">
+      <span class="lab">DAY ／ 日</span>
+      <div class="selwrap"><select class="fld" id="d1"></select></div>
+    </div>
+  </div>
+
+  <div class="result">
+    <div id="err1" class="err" style="display:none"></div>
+    <div id="note1" class="split-note" style="display:none"></div>
+    <div id="r1" class="fade">
+      <div class="res-main" id="r1main">—</div>
+      <div class="res-sub" id="r1sub">—</div>
+      <div class="res-eto" id="r1eto">—</div>
+    </div>
+    <div class="copies">
+      <button class="copy" id="c1a"><span class="fm">形式 ①　西暦（和暦）</span><span class="row"><span class="ic">📋</span><span class="tx"></span></span></button>
+      <button class="copy" id="c1b"><span class="fm">形式 ②　和暦（西暦）</span><span class="row"><span class="ic">📋</span><span class="tx"></span></span></button>
+      <button class="copy" id="c1c"><span class="fm">形式 ③　西暦のみ</span><span class="row"><span class="ic">📋</span><span class="tx"></span></span></button>
+    </div>
+  </div>
+  <p class="unchiku" id="u1"></p>
+</section>
+
+<!-- ============ 其の二：西暦 → 元号 ============ -->
+<section class="card">
+  <div class="card-h">
+    <span class="n">其の二</span><h2>西暦 → 元号</h2>
+    <span class="memo">キーボード入力でも、スクロール選択でも</span>
+  </div>
+  <div class="inputs g2">
+    <div class="col">
+      <span class="lab">YEAR ／ 西暦（直接入力できます） <button class="today" id="today2">今日</button></span>
+      <input class="fld" id="y2" type="number" step="1" inputmode="numeric" style="margin-bottom:10px">
+      <div class="picker" id="syPick"></div>
+      <p class="hint">↓ 下へスクロールで古い西暦へ（1873年まで）</p>
+    </div>
+    <div class="col">
+      <span class="lab">MONTH ／ 月</span>
+      <div class="selwrap"><select class="fld" id="m2"></select></div>
+    </div>
+    <div class="col">
+      <span class="lab">DAY ／ 日</span>
+      <div class="selwrap"><select class="fld" id="d2"></select></div>
+    </div>
+  </div>
+
+  <div class="result">
+    <div id="err2" class="err" style="display:none"></div>
+    <div id="note2" class="split-note" style="display:none"></div>
+    <div class="cands" id="cands2" style="display:none"></div>
+    <div id="r2" class="fade">
+      <div class="res-main" id="r2main">—</div>
+      <div class="res-sub" id="r2sub">—</div>
+      <div class="res-eto" id="r2eto">—</div>
+    </div>
+    <div class="copies">
+      <button class="copy" id="c2a"><span class="fm">形式 ①　西暦（和暦）</span><span class="row"><span class="ic">📋</span><span class="tx"></span></span></button>
+      <button class="copy" id="c2b"><span class="fm">形式 ②　和暦（西暦）</span><span class="row"><span class="ic">📋</span><span class="tx"></span></span></button>
+      <button class="copy" id="c2c"><span class="fm">形式 ③　和暦のみ</span><span class="row"><span class="ic">📋</span><span class="tx"></span></span></button>
+    </div>
+  </div>
+  <p class="unchiku" id="u2"></p>
+</section>
+
+<footer>
+  ※ 対応範囲は明治6年（1873年）1月1日から令和81年（2099年）12月31日までです。日本が太陽暦（グレゴリオ暦）に改暦したのが明治5年12月3日＝1873年1月1日で、この日以降は和暦と西暦の月日が完全に一致します。<br>
+  ※ 改元の日付は次のとおりです。明治45年7月30日＝大正元年7月30日／大正15年12月25日＝昭和元年12月25日／昭和64年1月7日の翌日から平成元年1月8日／平成31年4月30日の翌日から令和元年5月1日。<br>
+  ※ 大正と昭和の始まりは、前の天皇の崩御と同じ日に改元されたため、その一日だけ二通りの書き方が並び立ちます（例：1926年12月25日＝大正15年12月25日＝昭和元年12月25日）。該当日は両方を候補として表示します。<br>
+  ※ 干支は西暦年に対応させた表示です。立春や旧正月を境とする流儀では一致しない場合があります。<br>
+  ※ 令和の年数は現行のまま計算しています。将来の改元があった場合、その日以降の表記は変わります。<br>
+<b>  ※ 1872年12月31日以前（太陰太陽暦の時代）の年単位の換算は、大化までを収めた
+  <a href="saika-oukan.html">歳華往還・簡易版</a> をお使いください。</b>
+
+  <p class="sig">歳華往還 ＜和暦⇄西暦コンバータ＞ @soranoiro.net</p>
+</footer>
+
+</div>
+
+<script>
+/* ========= 元号データ（改元日を持つ・新しい順） =========
+   from / to は「その元号が使われた最初の日／最後の日」（両端を含む） */
+const ERAS=[
+ {n:'令和',y:'れいわ',base:2018,from:[2019,5,1],  to:null,
+  o:'『万葉集』梅花の歌の序「初春の令月にして、気淑く風和ぎ」。天皇の譲位にともなう、憲政史上初の生前改元。'},
+ {n:'平成',y:'へいせい',base:1988,from:[1989,1,8], to:[2019,4,30],
+  o:'『史記』五帝本紀「内平かに外成る」、『書経』「地平かに天成る」。昭和天皇崩御の翌日から。'},
+ {n:'昭和',y:'しょうわ',base:1925,from:[1926,12,25],to:[1989,1,7],
+  o:'『書経』尭典「百姓昭明、協和万邦」。64年は歴代最長だが、元年と64年はどちらも1週間ほどしかない。'},
+ {n:'大正',y:'たいしょう',base:1911,from:[1912,7,30],to:[1926,12,25],
+  o:'『易経』「大亨は以て正しくす、天の道なり」。元年は7月30日から、15年は12月25日まで。'},
+ {n:'明治',y:'めいじ',base:1867,from:[1873,1,1],  to:[1912,7,30],
+  o:'『易経』説卦伝「聖人南面して天下に聴き、明に嚮ひて治む」。一世一元の制はここから。明治5年12月3日が1873年1月1日となり、太陽暦に改まった。'},
+];
+const MIND=[1873,1,1], MAXD=[2099,12,31];
+
+/* ========= 日付ヘルパ ========= */
+const dn = a => a[0]*10000+a[1]*100+a[2];
+const dim = (y,m) => new Date(y,m,0).getDate();
+const WD = ['日','月','火','水','木','金','土'];
+const wday = a => WD[new Date(a[0],a[1]-1,a[2]).getDay()];
+const diff = (a,b) => Math.round((Date.UTC(b[0],b[1]-1,b[2])-Date.UTC(a[0],a[1]-1,a[2]))/86400000);
+const KAN='甲乙丙丁戊己庚辛壬癸', SHI='子丑寅卯辰巳午未申酉戌亥';
+const KANY=['きのえ','きのと','ひのえ','ひのと','つちのえ','つちのと','かのえ','かのと','みずのえ','みずのと'];
+const SHIY=['ね','うし','とら','う','たつ','み','うま','ひつじ','さる','とり','いぬ','い'];
+const SHIA=['子（鼠）','丑（牛）','寅（虎）','卯（兎）','辰（龍）','巳（蛇）','午（馬）','未（羊）','申（猿）','酉（鶏）','戌（犬）','亥（猪）'];
+const eto = y => { const a=(y-4)%10,b=(y-4)%12;
+  return `${KAN[a]}${SHI[b]}（${KANY[a]}${SHIY[b]}）・十二支は ${SHIA[b]}`; };
+
+const inEra = (e,a) => dn(a)>=dn(e.from) && (e.to ? dn(a)<=dn(e.to) : true);
+const candsOf = a => (dn(a)<dn(MIND)||dn(a)>dn(MAXD)) ? [] :
+  ERAS.filter(e=>inEra(e,a)).map(e=>({era:e, n:a[0]-e.base}));
+const maxN = e => (e.to ? e.to[0] : MAXD[0]) - e.base;
+const minN = e => e.from[0]-e.base;
+
+const waStr = (e,n,m,d) => `${e.n}${n===1?'元':n}年${m}月${d}日`;
+const seStr = a => `${a[0]}年${a[1]}月${a[2]}日`;
+const waY = (e,n) => `${e.n}${n===1?'元':n}年`;
+/* 形式①：2026年（令和8年）9月6日 ／ 形式②：令和8年（2026年）9月6日 */
+const fmtA = (e,n,a) => `${a[0]}年（${waY(e,n)}）${a[1]}月${a[2]}日`;
+const fmtB = (e,n,a) => `${waY(e,n)}（${a[0]}年）${a[1]}月${a[2]}日`;
+const $ = id => document.getElementById(id);
+
+/* ========= 状態（初期値は今日） ========= */
+const T=(()=>{const t=new Date();return [t.getFullYear(),t.getMonth()+1,t.getDate()];})();
+const TODAY = dn(T)>=dn(MIND)&&dn(T)<=dn(MAXD) ? T : [2026,1,1];
+const S1={ei:0,n:1,m:TODAY[1],d:TODAY[2]};
+const S2={y:TODAY[0],m:TODAY[1],d:TODAY[2],cand:0};
+(()=>{ const c=candsOf(TODAY)[0]; S1.ei=ERAS.indexOf(c.era); S1.n=c.n; })();
+
+/* ========= 部品 ========= */
+function buildPicker(el, items, sel, onPick, toTop){
+  const f=document.createDocumentFragment();
+  items.forEach((it,i)=>{
+    const b=document.createElement('button');
+    b.className='pick'+(i===sel?' on':'');
+    b.innerHTML=`<span class="nm">${it.main}</span>`+(it.yomi?`<span class="yo">${it.yomi}</span>`:'')+
+                `<span class="rg num">${it.right||''}</span>`;
+    b.onclick=()=>onPick(i);
+    f.appendChild(b);
+  });
+  el.innerHTML=''; el.appendChild(f);
+  const on=el.children[sel];
+  if(on) el.scrollTop = toTop ? on.offsetTop
+       : Math.max(0, on.offsetTop - el.clientHeight/2 + on.clientHeight/2);
+}
+function mark(el, sel){
+  const c=el.querySelector('.pick.on'); if(c) c.classList.remove('on');
+  const n=el.children[sel]; if(n) n.classList.add('on');
+}
+function fillSel(sel, from, to, cur, suffix){
+  sel.innerHTML='';
+  for(let v=from; v<=to; v++){
+    const o=document.createElement('option');
+    o.value=v; o.textContent=v+suffix; if(v===cur) o.selected=true;
+    sel.appendChild(o);
+  }
+}
+
+/* ========= 其の一：元号 → 西暦 ========= */
+function buildEra(){
+  buildPicker($('eraPick'), ERAS.map(e=>({
+    main:e.n, yomi:e.y,
+    right: e.to ? `${e.from[0]}–${e.to[0]}` : `${e.from[0]}–`
+  })), S1.ei, i=>{
+    S1.ei=i; mark($('eraPick'), i);
+    const e=ERAS[i];
+    S1.n=Math.min(Math.max(S1.n,minN(e)),maxN(e));
+    buildEraYear(true); syncDay1(); render1();
+  }, false);
+}
+function buildEraYear(toTop){
+  const e=ERAS[S1.ei], hi=maxN(e), lo=minN(e), list=[];
+  for(let n=hi;n>=lo;n--) list.push({main:(n===1?'元':n)+'年', right:`${e.base+n}`});
+  buildPicker($('eyPick'), list, hi-S1.n, i=>{
+    S1.n=hi-i; mark($('eyPick'), i); syncDay1(); render1();
+  }, toTop);
+}
+function syncDay1(){
+  const gy=ERAS[S1.ei].base+S1.n;
+  fillSel($('m1'),1,12,S1.m,'月');
+  const dmax=dim(gy,S1.m); if(S1.d>dmax) S1.d=dmax;
+  fillSel($('d1'),1,dmax,S1.d,'日');
+}
+function render1(){
+  const e=ERAS[S1.ei], n=S1.n, a=[e.base+n, S1.m, S1.d];
+  const wa=waStr(e,n,S1.m,S1.d), se=seStr(a);
+  const box=$('r1'); box.classList.remove('fade'); void box.offsetWidth; box.classList.add('fade');
+  const dis=v=>['c1a','c1b','c1c'].forEach(id=>$(id).disabled=v);
+
+  if(!inEra(e,a) || dn(a)<dn(MIND) || dn(a)>dn(MAXD)){     /* 元号の期間外 */
+    const real=candsOf(a);
+    let msg=`<b>${wa}</b> は存在しません。`;
+    if(dn(a)<dn(e.from)) msg+=`${e.n}${n===1?'元':n}年は ${e.from[1]}月${e.from[2]}日 から始まります。`;
+    else if(e.to)        msg+=`${e.n}${n===1?'元':n}年は ${e.to[1]}月${e.to[2]}日 までです。`;
+    if(real.length) msg+=`　${a[0]}年${a[1]}月${a[2]}日 は <b>${waStr(real[0].era,real[0].n,a[1],a[2])}</b> にあたります。`;
+    $('err1').style.display='block'; $('err1').innerHTML=msg;
+    $('note1').style.display='none';
+    $('r1main').textContent='—'; $('r1sub').textContent='—'; $('r1eto').textContent='—';
+    ['c1a','c1b','c1c'].forEach(id=>$(id).querySelector('.tx').textContent='—');
+    dis(true);
+    $('u1').innerHTML=`<span class="era-tag">改元の境目</span>改元は年の途中に起こるため、元号の最初の年と最後の年は12か月に満たないことがあります。`;
+    return;
+  }
+  dis(false); $('err1').style.display='none';
+
+  const others=candsOf(a).filter(c=>c.era!==e);
+  if(others.length){
+    $('note1').style.display='block';
+    $('note1').textContent=`※ この日は改元の当日です。${others.map(c=>waStr(c.era,c.n,a[1],a[2])).join('・')} とも書けます。`;
+  }else $('note1').style.display='none';
+
+  $('r1main').textContent=se;
+  $('r1sub').innerHTML=`${wa}　（${wday(a)}曜日）`+(n===1?'<span class="gen">改元の年</span>':'');
+  $('r1eto').innerHTML=`干支：${eto(a[0])}<br>`+
+    `${e.n}の第 ${(diff(e.from,a)+1).toLocaleString()} 日目　／　${a[0]}年の第 ${diff([a[0],1,1],a)+1} 日目`+
+    (dn(a)>dn(T)?'　（未来の日付です）':'');
+  $('c1a').querySelector('.tx').textContent=fmtA(e,n,a);
+  $('c1b').querySelector('.tx').textContent=fmtB(e,n,a);
+  $('c1c').querySelector('.tx').textContent=se;
+  $('u1').innerHTML=`<span class="era-tag">${e.n}</span><b>${e.n}（${e.y}）</b>　`+
+    `${seStr(e.from)}〜${e.to?seStr(e.to):'現在'}。${e.o}`;
+}
+
+/* ========= 其の二：西暦 → 元号 ========= */
+function buildSy(){
+  const list=[];
+  for(let y=MAXD[0]; y>=MIND[0]; y--){
+    const c=candsOf([y,7,1])[0] || candsOf([y,12,31])[0];
+    list.push({main:y+'年', right:c?`${c.era.n}${c.n===1?'元':c.n}年`:''});
+  }
+  buildPicker($('syPick'), list, MAXD[0]-S2.y, i=>setY(MAXD[0]-i), true);
+}
+function setY(y){
+  S2.y=Math.min(MAXD[0],Math.max(MIND[0],y|0));
+  $('y2').value=S2.y; mark($('syPick'), MAXD[0]-S2.y);
+  S2.cand=0; syncDay2(); render2();
+}
+function syncDay2(){
+  fillSel($('m2'),1,12,S2.m,'月');
+  const dmax=dim(S2.y,S2.m); if(S2.d>dmax) S2.d=dmax;
+  fillSel($('d2'),1,dmax,S2.d,'日');
+}
+function render2(){
+  const a=[S2.y,S2.m,S2.d], cs=candsOf(a);
+  const box=$('r2'); box.classList.remove('fade'); void box.offsetWidth; box.classList.add('fade');
+  const dis=v=>['c2a','c2b','c2c'].forEach(id=>$(id).disabled=v);
+
+  if(cs.length===0){
+    $('err2').style.display='block';
+    $('err2').innerHTML=`<b>${seStr(a)}</b> は対応範囲の外です。この版は明治6年（1873年）1月1日以降を扱います。`;
+    $('cands2').style.display='none'; $('note2').style.display='none';
+    $('r2main').textContent='—'; $('r2sub').textContent='—'; $('r2eto').textContent='—';
+    ['c2a','c2b','c2c'].forEach(id=>$(id).querySelector('.tx').textContent='—');
+    dis(true); $('u2').innerHTML='';
+    return;
+  }
+  dis(false); $('err2').style.display='none';
+
+  if(cs.length>1){
+    $('note2').style.display='block';
+    $('note2').textContent=`※ ${seStr(a)}は改元の当日。二通りの書き方が並び立ちます。`;
+    const cb=$('cands2'); cb.style.display='flex'; cb.innerHTML='';
+    cs.forEach((c,i)=>{
+      const b=document.createElement('button');
+      b.className='cand'+(i===S2.cand?' on':'');
+      b.textContent=waStr(c.era,c.n,a[1],a[2]);
+      b.onclick=()=>{ S2.cand=i; render2(); };
+      cb.appendChild(b);
+    });
+  }else{ $('note2').style.display='none'; $('cands2').style.display='none'; }
+
+  const c=cs[Math.min(S2.cand,cs.length-1)], e=c.era;
+  const wa=waStr(e,c.n,a[1],a[2]), se=seStr(a);
+  $('r2main').innerHTML=wa+(c.n===1?'<span class="gen">改元の年</span>':'');
+  $('r2sub').innerHTML=`${se}　（${wday(a)}曜日）`;
+  $('r2eto').innerHTML=`干支：${eto(a[0])}<br>`+
+    `${e.n}の第 ${(diff(e.from,a)+1).toLocaleString()} 日目　／　${a[0]}年の第 ${diff([a[0],1,1],a)+1} 日目`+
+    (dn(a)>dn(T)?'　（未来の日付です）':'');
+  $('c2a').querySelector('.tx').textContent=fmtA(e,c.n,a);
+  $('c2b').querySelector('.tx').textContent=fmtB(e,c.n,a);
+  $('c2c').querySelector('.tx').textContent=wa;
+  $('u2').innerHTML=`<span class="era-tag">${e.n}</span><b>${e.n}（${e.y}）</b>　`+
+    `${seStr(e.from)}〜${e.to?seStr(e.to):'現在'}。${e.o}`;
+}
+
+/* ========= コピー ========= */
+function copy(btn){
+  if(btn.disabled) return;
+  const text=btn.querySelector('.tx').textContent;
+  const done=()=>{
+    btn.classList.add('done'); btn.querySelector('.tx').textContent='✓ コピーしました';
+    setTimeout(()=>{ btn.classList.remove('done'); render1(); render2(); },1400);
+  };
+  if(navigator.clipboard && window.isSecureContext)
+    navigator.clipboard.writeText(text).then(done).catch(()=>fallback(text,done));
+  else fallback(text,done);
+}
+function fallback(text,done){
+  const ta=document.createElement('textarea');
+  ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try{ document.execCommand('copy'); done(); }catch(e){ alert('コピーできませんでした：'+text); }
+  document.body.removeChild(ta);
+}
+['c1a','c1b','c1c','c2a','c2b','c2c'].forEach(id=>$(id).addEventListener('click',()=>copy($(id))));
+
+/* ========= 入力の結線 ========= */
+$('m1').addEventListener('change',e=>{ S1.m=+e.target.value; syncDay1(); render1(); });
+$('d1').addEventListener('change',e=>{ S1.d=+e.target.value; render1(); });
+$('m2').addEventListener('change',e=>{ S2.m=+e.target.value; S2.cand=0; syncDay2(); render2(); });
+$('d2').addEventListener('change',e=>{ S2.d=+e.target.value; S2.cand=0; render2(); });
+$('y2').min=MIND[0]; $('y2').max=MAXD[0];
+$('y2').addEventListener('input',e=>{
+  const v=parseInt(e.target.value,10);
+  if(!isNaN(v)&&v>=MIND[0]&&v<=MAXD[0]){ S2.y=v; S2.cand=0; mark($('syPick'),MAXD[0]-v); syncDay2(); render2(); }
+});
+$('y2').addEventListener('blur',()=>setY(parseInt($('y2').value,10)||TODAY[0]));
+$('today1').addEventListener('click',()=>{
+  const c=candsOf(TODAY)[0];
+  S1.ei=ERAS.indexOf(c.era); S1.n=c.n; S1.m=TODAY[1]; S1.d=TODAY[2];
+  mark($('eraPick'),S1.ei); buildEraYear(true); syncDay1(); render1();
+});
+$('today2').addEventListener('click',()=>{ S2.m=TODAY[1]; S2.d=TODAY[2]; setY(TODAY[0]); });
+
+/* ========= 起動 ========= */
+buildEra(); buildEraYear(true); syncDay1(); render1();
+$('y2').value=S2.y; buildSy(); syncDay2(); render2();
+</script>
+</body>
+</html>
